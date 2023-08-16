@@ -31,6 +31,7 @@ export async function POST(request: Request) {
     callbackManager: CallbackManager.fromHandlers(handlers),
   });
 
+
   const chain = VectorDBQAChain.fromLLM(model, vectorStore, {
     k: 1,
     returnSourceDocuments: true,
